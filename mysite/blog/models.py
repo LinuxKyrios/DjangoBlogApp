@@ -25,10 +25,10 @@ class Post(models.Model):
     #Post status
     status = models.CharField(max_length=10, choices=STATUS_CHOICES, default='draft')
 
-#ordering posts by publish date
-class Meta:
-    ordering = ('-publish',)
+    #ordering posts by publish date
+    class Meta:
+        ordering = ('-publish',)
 
-#returns default representation of model
-def __str__(self):
-    return self.title
+    #returns default representation of model
+    def __str__(self):
+        return self.title
